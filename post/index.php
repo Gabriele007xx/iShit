@@ -23,8 +23,9 @@
             echo "<p>$message</p>";
         } else {
             echo "<section><img src='" . htmlspecialchars($post['fileNome']) . "' alt='Post Image' style='width: 100px; height: 100px;'>";
-            echo "<span style='color: " . htmlspecialchars($post['color']) . ";'>" . htmlspecialchars($post['color']) . "Galleggia:" . htmlspecialchars($post['galleggio']) ." Forma:" . htmlspecialchars($post['forma']) . "</span>";
-            echo "<small>Pubblicato il " . htmlspecialchars($post['data']) . "</small></section>";
+            echo "<span style='color: " . getColorByColor($post['color']) . ";'><img src=./" . getShitImage($post['color']) . ">" . htmlspecialchars($post['color']) . " Galleggia:" . htmlspecialchars($post['galleggio']) ." Forma:" . htmlspecialchars($post['forma']) . "</span>";
+            echo "<small>Pubblicato il " . htmlspecialchars($post['data']) . "</small>";
+            echo "</section>";
         }
     ?>
     <?php include('../site/footer.php'); ?>
