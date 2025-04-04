@@ -33,7 +33,8 @@ if(isset($_POST['submit'])) {
 
     try 
     {
-        $stmt = $pdo->prepare("INSERT INTO posts (username, color, galleggio, forma, fileNome) VALUES (:username, :color, :galleggio, :forma, :nomefile)");
+        $stmt = $pdo->prepare("INSERT INTO posts (userID, color, galleggio, forma, fileNome) VALUES (:userid, :color, :galleggio, :forma, :nomefile)");
+        $stmt->bindParam(':userid', $_SESSION['id']);
         $stmt->bindParam(':color', $color);
         $stmt->bindParam(':float', $float);
         $stmt->bindParam(':forma', $forma);

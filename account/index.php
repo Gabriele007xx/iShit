@@ -33,7 +33,7 @@ require('../config/config.php');
             foreach ($posts as $post) {
                 echo "<img src='../uploads/" . htmlspecialchars($_SESSION['username']) . "/" . htmlspecialchars($post['fileNome']) . "' alt='Post Image' style='width: 100px; height: 100px;'>";
                 echo "<span style='color: " . htmlspecialchars($post['color']) . ";'>" . htmlspecialchars($post['color']) . "Galleggia:" . htmlspecialchars($post['galleggio']) ."Forma:" . htmlspecialchars($post['forma']) . "</span>";
-                echo "<small>Pubblicato il " . htmlspecialchars($post['created_at']) . "</small><hr>";
+                echo "<small>Pubblicato il " . htmlspecialchars($post['data']) . "</small><hr>";
                 echo "<hr>";
             }
         } else {

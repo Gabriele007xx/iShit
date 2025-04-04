@@ -20,9 +20,10 @@ require('config/config.php');
 
         if ($posts) {
             foreach ($posts as $post) {
-                echo "<h2>" . htmlspecialchars($post['title']) . "</h2>";
-                echo "<p>" . htmlspecialchars($post['content']) . "</p>";
-                echo "<small>Pubblicato il " . htmlspecialchars($post['created_at']) . "</small><hr>";
+                echo "<img src='" . htmlspecialchars($post['fileNome']) . "' alt='Post Image' style='width: 100px; height: 100px;'>";
+                echo "<span style='color: " . htmlspecialchars($post['color']) . ";'>" . htmlspecialchars($post['color']) . "Galleggia:" . htmlspecialchars($post['galleggio']) ."Forma:" . htmlspecialchars($post['forma']) . "</span>";
+                echo "<small>Pubblicato il " . htmlspecialchars($post['data']) . "</small><hr>";
+                echo "<hr>";
             }
         } else {
             echo "<p>Nessun post trovato.</p>";
