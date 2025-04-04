@@ -1,6 +1,8 @@
-# iShit - README
+# iShit
 
-**iShit** è un social network innovativo e unico nel suo genere, dove gli utenti possono condividere una parte del loro quotidiano che di solito rimane nascosta: le feci! È una piattaforma divertente e bizzarra che permette di condividere, commentare e apprezzare le esperienze più... particolari.
+![image](https://github.com/user-attachments/assets/67459c69-bd03-4ea7-ac19-9350ced3def5)
+
+**iShit** è un social network innovativo e unico nel suo genere, dove gli utenti possono condividere una parte del loro quotidiano che di solito rimane nascosta: le feci! È una piattaforma divertente e bizzarra che permette di condividere e apprezzare le esperienze più... particolari.
 
 ## Funzionalità principali
 
