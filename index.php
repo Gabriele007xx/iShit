@@ -8,9 +8,11 @@ require('config/config.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>iShit - La tua cacca online</title>
 </head>
 <body>
+    <?php include('nav.php'); ?>
     <h1>Ultimi post</h1>
     <?php
     try {
@@ -32,5 +34,6 @@ require('config/config.php');
         echo "Errore: " . $e->getMessage();
     }
     ?>
+    <?php include('footer.php'); ?>    
 </body>
 </html>

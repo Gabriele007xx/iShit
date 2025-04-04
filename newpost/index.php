@@ -54,6 +54,7 @@ if(isset($_POST['submit'])) {
     <title>Nuovo Post - iShit</title>
 </head>
 <body>
+    <?php include('../site/nav.php'); ?>
     <?php if(isset($message)) { echo "<p>$message</p>"; } ?>
     <h1>Nuovo Post</h1>
     <form method="POST" action="" enctype="multipart/form-data">
@@ -71,5 +72,7 @@ if(isset($_POST['submit'])) {
         <label>Foto:</label><br>
         <input type="file" name="fileToUpload" id="fileToUpload"><br>
         <input type="submit" name="submit" value="Pubblica">
+    </form>
+    <?php include('../site/footer.php'); ?>    
 </body>
 </html>

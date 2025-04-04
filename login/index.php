@@ -38,6 +38,7 @@ if(isset($_POST['login'])) {
     <title>Login - iShit</title>
 </head>
 <body>
+    <?php include('../site/nav.php'); ?>
     <h1>Login</h1>
     <?php if(isset($message)): echo $message; endif; ?>
     <form method="POST" action="">
@@ -47,5 +48,7 @@ if(isset($_POST['login'])) {
         <input type="password" name="password" required><br><br>
         <input type="submit" name="login" value="Accedi">
     </form>
+    <p>Non hai un account? <a href="../register/">Registrati</a></p>
+    <?php include('../site/footer.php'); ?>
 </body>
 </html>

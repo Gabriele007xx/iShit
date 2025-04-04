@@ -14,6 +14,7 @@ require('../config/config.php');
     <title>Your account - iShit</title>
 </head>
 <body>
+    <?php include('../site/nav.php'); ?>
     <h1>Dettagli account</h1>
     <table>
         <tr>
@@ -40,5 +41,6 @@ require('../config/config.php');
             echo "<p>Nessun post trovato.</p>";
         }
     ?>
+    <?php include('../site/footer.php'); ?>
 </body>
 </html>

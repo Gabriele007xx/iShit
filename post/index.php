@@ -17,6 +17,7 @@
     <title>Cacca di - <?php $post["username"]?> iShit</title>
 </head>
 <body>
+    <?php include('../site/nav.php'); ?>
     <?php
         if(isset($message)){
             echo "<p>$message</p>";
@@ -26,5 +27,6 @@
             echo "<small>Pubblicato il " . htmlspecialchars($post['data']) . "</small><hr>";
         }
     ?>
+    <?php include('../site/footer.php'); ?>
 </body>
 </html>
