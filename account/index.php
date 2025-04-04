@@ -32,10 +32,7 @@ require('../config/config.php');
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if ($posts) {
             foreach ($posts as $post) {
-                echo "<section><img src='" . htmlspecialchars($post['fileNome']) . "' alt='Post Image' style='width: 100px; height: 100px;'>";
-                echo "<span style='color: " . getColorByColor($post['color']) . ";'><img src=./" . getShitImage($post['color']) . ">" . htmlspecialchars($post['color']) . " Galleggia:" . htmlspecialchars($post['galleggio']) ." Forma:" . htmlspecialchars($post['forma']) . "</span>";
-                echo "<small>Pubblicato il " . htmlspecialchars($post['data']) . "</small>";
-                echo "</section>";
+                printPost($post['fileNome'], $post['color'], $post['galleggio'], $post['data'], $post['forma'], $post['id']);
             }
         } else {
             echo "<p>Nessun post trovato.</p>";

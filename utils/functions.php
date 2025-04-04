@@ -43,4 +43,12 @@ function getShitImage($color)
             return DEFAULT_IMAGE_PATH . '/brownshit.png';
     }
 }
+
+function printPost($fileNome, $color, $galleggio, $data, $forma, $id)
+{
+    echo "<section><img src='" . htmlspecialchars($fileNome) . "' alt='Post Image' style='width: 100px; height: 100px;'>";
+    echo "<span style='color: " . getColorByColor($color) . ";'><img src=./" . getShitImage($color) . ">" . htmlspecialchars($color) . " Galleggia:" . htmlspecialchars($galleggio) ." Forma:" . htmlspecialchars($forma) . "</span>";
+    echo "<small>Pubblicato il " . htmlspecialchars($data) . " <a href='./post/index.php?id=" . $id . "'>Vedi post</a></small>";
+    echo "</section>";
+}
 ?>
