@@ -24,13 +24,16 @@
 ## Installazione
 
 1. Carica i file su un server web.
-2. Crea le tabelle:
-- - users: 
-- - posts: 
-
+2. Crea il database 'ishit'.
+3. Cambia le credenziali di accesso al db in config.php se neccessario.
+4. Crea le tabelle:
+- - users: ![image](https://github.com/user-attachments/assets/5439ff0d-fc8c-4e3e-b37e-56dc4114942f)
+- - posts: ![image](https://github.com/user-attachments/assets/806d5166-1073-4a83-b9f9-f7016ed905f4)
+- - votes: ![image](https://github.com/user-attachments/assets/56c78f68-8cac-47c6-ae6a-f77596e90d7a)
+ 
 ## Contribuisci
 
-Se sei uno sviluppatore e desideri contribuire al progetto, puoi fare una **pull request** su GitHub. Per farlo:
+Se desideri contribuire al progetto, puoi contribuire così:
 
 1. Forka la repo e clonala.
 2. Crea un branch per la tua modifica:
@@ -49,4 +52,4 @@ Se sei uno sviluppatore e desideri contribuire al progetto, puoi fare una **pull
 
 ## Licenza
 
-Distribuito sotto la licenza MIT. Vedi il file [LICENSE](LICENSE) per ulteriori dettagli.
+Distribuito sotto la licenza GNU GPL v2.
