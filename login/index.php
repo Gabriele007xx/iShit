@@ -2,7 +2,7 @@
 session_start();
 
 require('../config/config.php');
-
+include('../site/nav.php'); 
 if(isset($_SESSION['username'])) {
     header('Location: ../index.php');
     exit();
@@ -35,10 +35,14 @@ if(isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Login - iShit</title>
 </head>
 <body>
-    <?php include('../site/nav.php'); ?>
+    <main>
+    <?php 
+        navbar(1);
+    ?>
     <h1>Login</h1>
     <?php if(isset($message)): echo $message; endif; ?>
     <form method="POST" action="">
@@ -50,5 +54,6 @@ if(isset($_POST['login'])) {
     </form>
     <p>Non hai un account? <a href="../register/">Registrati</a></p>
     <?php include('../site/footer.php'); ?>
+    </main>
 </body>
 </html>

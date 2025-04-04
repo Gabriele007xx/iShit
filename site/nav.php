@@ -1,7 +1,16 @@
-<nav>
+<?php
+function navbar($level)
+{
+    echo "<nav>
     <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="./register">Registrati</a></li>
-        <li><a href="./login">Login</a></li>
+        <li><a href='" .  buildPath($level) . "index.php'>Home</a></li>
+        <li><a href='" .  buildPath($level) . "register'>Registrati</a></li>
+        <li><a href='" .  buildPath($level) . "login'>Login</a></li>
     </ul>
-</nav>
+</nav>";
+    
+}
+?>
+
+
+
