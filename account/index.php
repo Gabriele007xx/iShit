@@ -5,16 +5,21 @@ if(!isset($_SESSION['username'])) {
     exit();
 }
 require('../config/config.php');
+include('../site/nav.php'); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Your account - iShit</title>
 </head>
 <body>
-    <?php include('../site/nav.php'); ?>
+    <?php 
+    navbar(1)
+    ?>
+    <main>
     <h1>Dettagli account</h1>
     <table>
         <tr>
@@ -32,12 +37,13 @@ require('../config/config.php');
         $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
         if ($posts) {
             foreach ($posts as $post) {
-                printPost($post['fileNome'], $post['color'], $post['galleggio'], $post['data'], $post['forma'], $post['id']);
+                printPost($post['fileNome'], $post['color'], $post['galleggio'], $post['data'], $post['forma'], $post['id'],$post['votes'], 1);
             }
         } else {
             echo "<p>Nessun post trovato.</p>";
         }
     ?>
     <?php include('../site/footer.php'); ?>
+    </main>
 </body>
 </html>

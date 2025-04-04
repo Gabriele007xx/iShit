@@ -2,6 +2,7 @@
 session_start();
 require('config/config.php');
 require('utils/functions.php');
+include('./site/nav.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,12 @@ require('utils/functions.php');
 </head>
 <body>
     <main>
-    <?php include('./site/nav.php'); ?>
+    <?php 
+    navbar(0);
+    if(isset($_GET['error'])) {
+        echo "<p class='error'>Errore: " . htmlspecialchars($_GET['error']) . "</p>";
+    }
+    ?>
     <h1>Ultimi post</h1>
     <?php
     try {
@@ -24,7 +30,7 @@ require('utils/functions.php');
 
         if ($posts) {
             foreach ($posts as $post) {
-                printPost($post['fileNome'], $post['color'], $post['galleggio'], $post['data'], $post['forma'], $post['id']);
+                printPost($post['fileNome'], $post['color'], $post['galleggio'], $post['data'], $post['forma'], $post['id'], $post['votes'], 0);
             }
         } else {
             echo "<p>Nessun post trovato.</p>";

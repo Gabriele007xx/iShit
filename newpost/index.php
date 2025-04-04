@@ -2,6 +2,7 @@
 session_start();
 require('../config/config.php');
 require('../utils/functions.php');
+include('../site/nav.php'); 
 if(!isset($_SESSION['username'])) {
     header('Location: ../login/');
     exit();
@@ -51,10 +52,14 @@ if(isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Nuovo Post - iShit</title>
 </head>
 <body>
-    <?php include('../site/nav.php'); ?>
+    <main>
+    <?php 
+        navbar(1);
+    ?>
     <?php if(isset($message)) { echo "<p>$message</p>"; } ?>
     <h1>Nuovo Post</h1>
     <form method="POST" action="" enctype="multipart/form-data">
@@ -73,6 +78,7 @@ if(isset($_POST['submit'])) {
         <input type="file" name="fileToUpload" id="fileToUpload"><br>
         <input type="submit" name="submit" value="Pubblica">
     </form>
-    <?php include('../site/footer.php'); ?>    
+    <?php include('../site/footer.php'); ?> 
+    </main>   
 </body>
 </html>
