@@ -29,6 +29,8 @@
 
 ## Installazione
 
+### Modo 1
+
 1. Carica i file su un server web.
 2. Crea il database 'ishit'.
 3. Cambia le credenziali di accesso al db in config.php se neccessario.
@@ -37,6 +39,10 @@
 - - posts: ![image](https://github.com/user-attachments/assets/352d4e7f-f83e-44a1-bc31-ef2b38890cce)
 - - votes: ![image](https://github.com/user-attachments/assets/56c78f68-8cac-47c6-ae6a-f77596e90d7a)
 - - comments: ![image](https://github.com/user-attachments/assets/2ce279c6-5276-411f-baa4-4cf6307a484c)
+
+### Modo 2
+
+Usa lo script di installazione in installer. Ricorda di eliminarlo dopo averlo creato.
 
 ## Screenshots
 
