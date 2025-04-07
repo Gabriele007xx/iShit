@@ -70,6 +70,12 @@ ul {
     font-weight: bold;
 }
 
+.success
+{
+  color: green;
+  font-weight: bold;
+}
+
 /* :root {
     --marrone-scuro: #5D4037;
     --marrone-medio: #8D6E63;

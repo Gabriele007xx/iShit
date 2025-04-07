@@ -20,6 +20,9 @@ include('./site/nav.php');
     if(isset($_GET['error'])) {
         echo "<p class='error'>Errore: " . htmlspecialchars($_GET['error']) . "</p>";
     }
+    if(isset($_SUCCESS['success'])) {
+        echo "<p class='success'>Successo: " . htmlspecialchars($_GET['success']) . " Vai a vedere il tuo commento nel post <a href='../post/index.php?id=" . $_GET['id'] ."'></p>";
+    }
     ?>
     <h1>Ultimi post</h1>
     <?php

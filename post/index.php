@@ -1,4 +1,5 @@
 <?php
+session_start();
     require('../config/config.php');
     require('../utils/functions.php');
     include('../site/nav.php'); 
@@ -33,7 +34,7 @@
     ?>
     <section>
         <form method="POST" action="../server/comment.php">
-            <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">
+            <input type="hidden" name="idPost" value="<?php echo $_GET['id']; ?>">
             <textarea name="comment" rows="4" cols="50" required></textarea><br>
             <input type="submit" value="Aggiungi commento">
         </form>
