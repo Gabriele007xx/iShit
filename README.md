@@ -1,6 +1,6 @@
 # iShit
 
-![image](https://github.com/user-attachments/assets/67459c69-bd03-4ea7-ac19-9350ced3def5)
+![image](https://github.com/user-attachments/assets/3f8f7f26-1a4c-4cf0-8f8d-8b8154e2cabc)
 
 **iShit** è un social network innovativo e unico nel suo genere, dove gli utenti possono condividere una parte del loro quotidiano che di solito rimane nascosta: le feci! È una piattaforma divertente e bizzarra che permette di condividere e apprezzare le esperienze più... particolari.
 
@@ -10,14 +10,18 @@
   
 - **Reazioni:** Gli altri utenti possono esprimere il loro apprezzamento tramite mi piace. Puoi vedere cosa pensano gli altri utenti delle tue "creazioni"!
 
-- **Profilo utente:** Ogni utente avrà un profilo dove poter raccogliere tutte le feci condivise.
+- **Commenti**: Commenta il risultato altrui.
+
+-**Statistiche**: Vedi quante volte hai fatto la cacca verde.  
+
+- **Profilo utente:** Ogni utente avrà un profilo proprio.
 
 ## Come funziona
 
 1. **Registrazione:** Crea un account inserendo il tuo nome utente, email e una password sicura.
 2. **Carica il tuo primo post:** Scatta una foto delle tue feci, carica l'immagine e aggiungi un titolo o una descrizione. Scegli un hashtag che rappresenti la tua "opera d'arte".
 3. **Condividi e interagisci:** Pubblica il tuo post e inizia a interagire con gli altri utenti commentando e reagendo ai loro contenuti.
-4. **Esplora la community:** Scopri le creazioni degli altri utenti e partecipa alle discussioni nella sezione commenti.
+4. **Classifica**: Post con piu' mi piace.
 
 ## Requisiti
 
@@ -30,10 +34,15 @@
 3. Cambia le credenziali di accesso al db in config.php se neccessario.
 4. Crea le tabelle:
 - - users: ![image](https://github.com/user-attachments/assets/5439ff0d-fc8c-4e3e-b37e-56dc4114942f)
-- - posts: ![image](https://github.com/user-attachments/assets/806d5166-1073-4a83-b9f9-f7016ed905f4)
+- - posts: ![image](https://github.com/user-attachments/assets/352d4e7f-f83e-44a1-bc31-ef2b38890cce)
 - - votes: ![image](https://github.com/user-attachments/assets/56c78f68-8cac-47c6-ae6a-f77596e90d7a)
 - - comments: ![image](https://github.com/user-attachments/assets/2ce279c6-5276-411f-baa4-4cf6307a484c)
- 
+
+## Screenshots
+
+![image](https://github.com/user-attachments/assets/67459c69-bd03-4ea7-ac19-9350ced3def5)
+![image](https://github.com/user-attachments/assets/87ede5cf-908f-40b8-a65a-074d71affb40)
+
  
 ## Contribuisci
 
