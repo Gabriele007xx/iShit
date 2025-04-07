@@ -64,9 +64,9 @@ if(isset($_POST['submit'])) {
     <h1>Nuovo Post</h1>
     <form method="POST" action="" enctype="multipart/form-data">
         <label for="color">Colore:</label>
-        <input type="radio" name="color" value="brown" required> <label>Marrone</label>
-        <input type="radio" name="color" value="green" required> <label>Verde</label>
-        <input type="radio" name="color" value="red" required> <label>Rosso</label>
+        <input type="radio" name="color" value="marrone" required> <label>Marrone</label>
+        <input type="radio" name="color" value="verde" required> <label>Verde</label>
+        <input type="radio" name="color" value="rossa" required> <label>Rosso</label>
         <label for="content">Gallegiava?</label><br>
         <input type="radio" name="galleggio" value="yes" required><label> Si</label>
         <input type="radio" name="galleggio" value="no" required> <label>No</label><br>
