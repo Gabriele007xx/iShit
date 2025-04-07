@@ -31,6 +31,22 @@
             printPost($post['fileNome'], $post['color'], $post['galleggio'], $post['data'], $post['forma'], $post['id'], $post['votes'], 1);
         }
     ?>
+    <section>
+        <form method="POST" action="../server/comment.php">
+            <input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>">
+            <textarea name="comment" rows="4" cols="50" required></textarea><br>
+            <input type="submit" value="Aggiungi commento">
+        </form>
+    </section>
+    <?php
+        $query = "SELECT * FROM comments WHERE idPost = :idPost";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(':idPost', $_GET['id'], PDO::PARAM_INT);
+        $stmt->execute();
+        while ($comment = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            printComment($comment['comment'], $comment['idUser'], 1);
+        }
+    ?>
     <?php include('../site/footer.php'); ?>
     </main>
 </body>
