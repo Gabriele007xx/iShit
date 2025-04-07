@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+require('../utils/functions.php');
 require('../config/config.php');
 include('../site/nav.php'); 
 

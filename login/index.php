@@ -2,6 +2,7 @@
 session_start();
 
 require('../config/config.php');
+require('../utils/functions.php');
 include('../site/nav.php'); 
 if(isset($_SESSION['username'])) {
     header('Location: ../index.php');

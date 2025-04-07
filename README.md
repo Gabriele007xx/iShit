@@ -32,6 +32,8 @@
 - - users: ![image](https://github.com/user-attachments/assets/5439ff0d-fc8c-4e3e-b37e-56dc4114942f)
 - - posts: ![image](https://github.com/user-attachments/assets/806d5166-1073-4a83-b9f9-f7016ed905f4)
 - - votes: ![image](https://github.com/user-attachments/assets/56c78f68-8cac-47c6-ae6a-f77596e90d7a)
+- - comments: ![image](https://github.com/user-attachments/assets/2ce279c6-5276-411f-baa4-4cf6307a484c)
+ 
  
 ## Contribuisci
 
