@@ -8,6 +8,8 @@ if(isset($_GET['step']) && $_GET['step'] == 1) {
     $db_pass = $_POST['db_pass'];
 
     // Create database connection
+    $pdo=new PDO("mysql:host=$db_host", $db_user, $db_pass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     try {
         if(file_exists('../config/config.php'))
         {
@@ -99,7 +101,7 @@ COMMIT;";
 COMMIT;";
 try
 {
-    $pdo = new PDO("mysql:host=" . DB_HOST . ", " . DB_USER . ", " . DB_PASS);
+    $pdo = new PDO("mysql:host=" . $_POST['db_host'] . ";dbname=ishit" , $_POST['db_user'], $_POST['db_pass']);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt=$pdo->prepare($queryVotes);
     $stmt->execute();
@@ -152,6 +154,9 @@ catch(PDOException $e)
                 if(isset($_GET['step']) && $_GET['step'] == 2) {
                     echo "<h2>Passo 2: Creazione tabelle";
                     echo "<form method='POST'>
+                    <input type='hidden' name='db_host' value='$_GET[db_host]'>
+                    <input type='hidden' name='db_user' value='$_GET[db_user]'>
+                    <input type='hidden' name='db_pass' value='$_GET[db_pass]'>
                         <input type='hidden' value=2 name='step'>
                         <input type='submit' name='invio' value='Crea tabelle'>";
                 } else {
@@ -161,9 +166,10 @@ catch(PDOException $e)
                 <label for='db_host'>Host del database:</label>
                 <input type='text' name='db_host' id='db_host' value='localhost' required><br>
                 <label for='db_user'>Utente del database:</label>
-                <input type='text' name='db_user' id='db_user' required><br>
+                <input type='text' name='db_user' id='db_user'><br>
                 <label for='db_pass'>Password del database:</label>
-                <input type='password' name='db_pass' id='db_pass' required><br>
+                <input type='password' name='db_pass' id='db_pass'><br>
+                <input type='hidden' name='step' value=2>
                 <input type='submit' name='invio' value='Installa'>
             </form>";
                 
