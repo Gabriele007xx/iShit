@@ -27,9 +27,9 @@ else
     $stmt->bindParam(':reaction', $_GET['reaction']);
     if($stmt->execute())
     {
-        $incrementVotes="UPDATE posts SET votes = votes + 1 WHERE idPost=:idPost";
+        $incrementVotes="UPDATE posts SET votes = votes + 1 WHERE id=:id";
         $stmt = $pdo->prepare($incrementVotes);
-        $stmt->bindParam(':idPost', $_GET['id']);
+        $stmt->bindParam(':id', $_GET['id']);
         if($stmt->execute())
         {
             header("Location: ../index.php?success=voteAdded");

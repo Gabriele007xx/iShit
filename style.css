@@ -90,6 +90,14 @@ ul {
     margin: 0 10px;
 }
 
+.table-menu
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 /* :root {
     --marrone-scuro: #5D4037;
     --marrone-medio: #8D6E63;

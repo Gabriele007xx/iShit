@@ -5,6 +5,7 @@ if(!isset($_SESSION['username'])) {
     exit();
 }
 require('../config/config.php');
+require('../utils/functions.php');
 include('../site/nav.php'); 
 ?>
 <!DOCTYPE html>
@@ -21,14 +22,17 @@ include('../site/nav.php');
     ?>
     <main>
     <h1>Dettagli account</h1>
-    <table>
+    <section>
+    <table class="table-menu">
         <tr>
             <th><img src="../res/avatar.png"></th>
             <th>Nome utente</th>
             <td><?php echo htmlspecialchars($_SESSION['username']); ?></td>
-            <td><img src="../res/settings"><a href="./settings">Impostazioni</a></td>
+            <td><img src="../res/settings.png"><a href="./settings">Impostazioni</a></td>
         </tr>
     </table>
+    </section>
+    <section><img src="../res/stats.png"><a href="./stats">Statistiche</a></section>
     <h2>Tutti i tuoi post</h2>
     <section><img src="../res/newpost.png"><a href="../newpost/">Crea un nuovo post...</a></section>
     <?php

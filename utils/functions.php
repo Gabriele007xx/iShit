@@ -53,7 +53,7 @@ function printPost($fileNome, $color, $galleggio, $data, $forma, $id, $votes, $l
     $stmt->execute();
     echo "<section><img src='" . buildPath($level) . htmlspecialchars($fileNome) . "' alt='Post Image' style='width: 100px; height: 100px;'>";
     echo "<span style='color: " . getColorByColor($color) . ";'><img src=" . buildPath($level) . getShitImage($color) . ">" . htmlspecialchars($color) . " Galleggia:" . htmlspecialchars($galleggio) ." Forma:" . htmlspecialchars($forma) . "</span>";
-    echo "<small>Pubblicato il " . htmlspecialchars($data) . " <a href='" . buildPath($level) . "post/index.php?id=" . $id . "'>Vedi post</a> Mi piace: " . $votes . "<a href='" . buildPath($level) . "/server/like.php?id=" . $id . "'><img src='" . buildPath($level) ."res/like.png' />Mi piace!</a> Commenti: " . $stmt->rowCount() ."</small>";
+    echo "<small>Pubblicato il " . htmlspecialchars($data) . " <a href='" . buildPath($level) . "post/index.php?id=" . $id . "'>Vedi post</a> Mi piace: " . $votes . "<a href='" . buildPath($level) . "/server/like.php?id=" . $id . "&reaction=1'><img src='" . buildPath($level) ."res/like.png' />Mi piace!</a> Commenti: " . $stmt->rowCount() ."</small>";
     echo "</section>";
 }
 
