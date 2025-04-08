@@ -66,7 +66,7 @@ function printComment($comment, $idUser, $level)
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    echo "<section><small>" . htmlspecialchars($user['username']) . ":</small><br>
+    echo "<section><small><a href='../profile/index.php?id=1'>" . htmlspecialchars($user['username']) . "</a>:</small><br>
     <p>" . htmlspecialchars($comment) . "</p>";
     echo "</section>";
 }

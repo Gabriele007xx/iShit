@@ -26,8 +26,9 @@ if(isset($_POST['submit'])) {
             exit();
         }
         //reasign the file to a random name
-        $target_file = $target_dir . randomString(32) . $_FILES["fileToUpload"]["name"];
-        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+        $target_file = randomString(32) . "." . pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION);;
+        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir);
+        rename($target_dir . $_FILES["fileToUpload"]["name"], $target_dir . $target_file);
     } else {
         $message= "Errore nel caricamento del file.";
     }
@@ -66,7 +67,7 @@ if(isset($_POST['submit'])) {
         <label for="color">Colore:</label>
         <input type="radio" name="color" value="marrone" required> <label>Marrone</label>
         <input type="radio" name="color" value="verde" required> <label>Verde</label>
-        <input type="radio" name="color" value="rossa" required> <label>Rosso</label>
+        <input type="radio" name="color" value="rossa" required> <label>Rosso</label><br>
         <label for="content">Gallegiava?</label><br>
         <input type="radio" name="galleggio" value="yes" required><label> Si</label>
         <input type="radio" name="galleggio" value="no" required> <label>No</label><br>
