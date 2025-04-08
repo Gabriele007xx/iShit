@@ -25,6 +25,9 @@ include('./site/nav.php');
     }
     ?>
     <h1>Ultimi post</h1>
+    <section class="menu">
+        <div class="menu-item"><img src="../res/newpost.png"><a href="./newpost">Nuovo post...</a></div>
+    </section>
     <?php
     try {
         $stmt = $pdo->prepare("SELECT * FROM posts ORDER BY id DESC LIMIT 10");

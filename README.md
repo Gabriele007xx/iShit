@@ -40,9 +40,11 @@
 - - votes: ![image](https://github.com/user-attachments/assets/56c78f68-8cac-47c6-ae6a-f77596e90d7a)
 - - comments: ![image](https://github.com/user-attachments/assets/2ce279c6-5276-411f-baa4-4cf6307a484c)
 
-### Modo 2
+### ~~Modo 2~~
 
-Usa lo script di installazione in installer. Ricorda di eliminarlo dopo averlo creato.
+~~Usa lo script di installazione in installer. Ricorda di eliminarlo dopo averlo creato.~~
+
+Lo script al momento non è completo.
 
 ## Screenshots
 

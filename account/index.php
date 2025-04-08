@@ -23,12 +23,14 @@ include('../site/nav.php');
     <h1>Dettagli account</h1>
     <table>
         <tr>
+            <th><img src="../res/avatar.png"></th>
             <th>Nome utente</th>
             <td><?php echo htmlspecialchars($_SESSION['username']); ?></td>
+            <td><img src="../res/settings"><a href="./settings">Impostazioni</a></td>
         </tr>
     </table>
     <h2>Tutti i tuoi post</h2>
-    <a href="../newpost/">Crea un nuovo post...</a>
+    <section><img src="../res/newpost.png"><a href="../newpost/">Crea un nuovo post...</a></section>
     <?php
         $query="SELECT * FROM posts WHERE username = :username ORDER BY id DESC";
         $stmt = $pdo->prepare($query);
