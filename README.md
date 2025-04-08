@@ -71,6 +71,10 @@ Se desideri contribuire al progetto, puoi contribuire così:
    ```
 5. Crea una pull request sulla repo originale.
 
+## Ringraziamenti
+
+- [ChartJS](https://www.chartjs.org) per i grafici.
+
 ## Licenza
 
 Distribuito sotto la licenza GNU GPL v2.
